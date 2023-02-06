@@ -6,7 +6,7 @@ export const ADD_EXPENSE = 'ADD_EXPENSE';
 
 export const userLogin = (payload) => ({
   type: USER_LOGIN,
-  email: payload.email,
+  email: payload,
 });
 
 export const sendCurrencies = (payload) => ({

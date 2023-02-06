@@ -29,7 +29,7 @@ class Header extends Component {
     return (
       <header>
         <h3 data-testid="email-field">
-          { `Email: ${email}` }
+          { email }
         </h3>
         <h3 data-testid="total-field">{ total.toFixed(2) }</h3>
         <h3 data-testid="header-currency-field">
