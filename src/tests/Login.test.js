@@ -31,4 +31,14 @@ describe('Verifica campos da pagina inicial', () => {
     userEvent.type(inputPass, passValid);
     expect(btn).toBeEnabled();
   });
+
+  it('Verifica o que foi salvo no estado global', async () => {
+    renderWithRouterAndRedux(<App />);
+    const inputEmail = screen.getByTestId(TestIdEmail);
+    const inputPass = screen.getByTestId(TestIdPass);
+    const btn = screen.getByRole('button');
+    userEvent.type(inputEmail, valideEmail);
+    userEvent.type(inputPass, passValid);
+    userEvent.click(btn);
+  });
 });
